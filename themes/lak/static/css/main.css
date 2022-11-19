@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Tenor+Sans&display=swap");
+html {
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h3,
+h4,
+h5 {
+  font-family: "Tenor Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+label {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  color: black;
+  border-radius: 3px;
+  padding: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+textarea:focus,
+input:focus {
+  background-color: white;
+  outline: none;
+}
+
+._hero-animation-parent > * {
+  animation: fadein_drop;
+  animation-duration: 1000ms;
+  transform: translateY(-200px);
+  opacity: 0;
+  animation-fill-mode: forwards
+}
+
+._hero-animation-parent *:nth-child(5) {
+  animation:  grow-in ease-in-out;
+  animation-duration: 1000ms;
+  animation-delay: 800ms;
+  opacity: 0;
+  transform: translateY(0px);
+  transform: scale(80%);
+  animation-fill-mode: forwards
+}
+
+._hero-animation-parent *:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+._hero-animation-parent *:nth-child(2) {
+  animation-delay: 250ms;
+}
+
+._hero-animation-parent *:nth-child(3){
+  animation-delay: 600ms;
+}
+
+._hero-animation-parent *:nth-child(4) {
+  animation: rotate 1000ms, bounce 2000ms infinite 1000ms;
+  transform: translateY(30px) rotate(180deg);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+._hero-arrow{ 
+  animation-name: bounce;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-delay: 2000ms;
+}
+
+@keyframes bounce{ 
+  0%, 50%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-10px);} 
+  60% {transform: translateY(-10px);} 
+}
+
+@keyframes rotate{ 
+  to{ 
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes grow-in{ 
+  from{ 
+  }
+  to{ 
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein_drop {
+  from {
+
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

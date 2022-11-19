@@ -1,0 +1,4 @@
+baseURL = 'http://lauraashlee.art'
+languageCode = 'en-us'
+title = 'lauraashlee.art'
+theme = "lak"

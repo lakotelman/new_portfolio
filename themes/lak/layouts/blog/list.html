@@ -1,0 +1,23 @@
+{{define "main"}}
+<div class="bg-gradient-to-br from-accent-dark to-accent h-[100vh] text-white relative z-0">
+    <div class="absolute top-0 left-0 w-full h-full bg-[url('/images/noise5.png')] -z-10"></div>
+    <section id="links" class="p-4 z-0">
+        <a href="{{.Site.BaseURL}}" class=" bg-white/20 text-sm p-2 w-max items-center gap-2 flex rounded-md">
+            {{partial "icons/smallleftarrow.html" ""}}
+            <p>Return to Home</p></a>
+        </section>
+        <div class="flex flex-col gap-8 mx-auto max-w-lg">
+            <h1 class="text-6xl pt-8">Posts</h1>
+            <div class="">
+                {{range .Pages }}
+                <div class="mb-8">
+                    <p class="text-sm text-neutral">{{.Date.Format "January 6, 2006"}}</p>
+                    <a href="{{ .Permalink}}"><h3 class="text-lg mb-2 text-white">{{.Title}}</h3></a>
+                    <p class="mb-4">{{.Summary}}</p>
+                    <a class="block text-right italic" href="{{.Permalink}}"> Read More... </a>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+{{end}}

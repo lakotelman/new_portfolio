@@ -1,0 +1,13 @@
+<head>
+  {{ $css := resources.Get "css/main.css" }} {{ $css = $css |
+  resources.Fingerprint "sha512" }}
+  <link
+    rel="preload stylesheet"
+    as="style"
+    type="text/css"
+    href="{{ $css.RelPermalink }}"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/main.css" rel="stylesheet" />
+  <script src="/js/scripts.js" defer></script>
+</head>

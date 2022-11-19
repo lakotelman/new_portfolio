@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "projectslisthead.html" . -}}
+  <body class="bg-hero-image bg-no-repeat bg-cover h-[100vh] bg-center">
+    <main class="py-9 mx-auto px-8 lg:max-w-7xl">
+      <section id="links" class="mb-4">
+        <a href="{{.Site.BaseURL}}" class=" bg-white/20 text-sm p-1.5 w-max items-center gap-2 flex rounded-md">
+            {{partial "icons/smallleftarrow.html" ""}}
+            <p>Return to Home</p></a>
+      </section>
+      <h1 class="text-6xl mb-4">Projects</h1>
+      <h3>A list of projects I've worked on.</h3>
+      <div class="mt-8">
+        <table class="rounded-md w-full mt-4">
+          <thead class>
+            <tr class="text-left">
+              <th>Year</th>
+              <th>Title</th>
+              <th class="hidden md:block lg:block">Build/ Skill</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{range .Pages }}
+            <tr class="text-left">
+              <td>{{.Date.Year}}</td>
+              <td>{{.Title}}</td>
+              <td class="hidden md:block lg:block">
+                {{ range $i, $e := .Params.build}}
+                <span class="m-0 p-0">{{$e}}</span
+                ><span class="my-0 mx-1">·</span>
+                {{end}}
+              </td>
+              <td>
+                <ul class="flex justify-start gap-4">
+                  <li class="hover:text-accent">
+                    <a
+                      aria-label="{{.Title }} overview"
+                      href="{{.RelPermalink}}"
+                    >
+                      {{ partial "icons/moreicon.html" }}</a
+                    >
+                  </li>
+                  {{ if .Params.gh_link}}
+                  <li class="hover:text-accent">
+                    <a href="{{.Params.gh_link}}"
+                      >{{ partial "icons/githubicon.html" }}</a
+                    >
+                    {{end}}
+                  </li>
+                  <li class="hover:text-accent">
+                    <a href="{{.Params.main_link}}"
+                      >{{ partial "icons/externallink.html" }}</a
+                    >
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            {{end}}
+          </tbody>
+        </table>
+      </div>
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

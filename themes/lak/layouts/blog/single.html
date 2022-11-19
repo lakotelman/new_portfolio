@@ -1,0 +1,21 @@
+{{define "main"}}
+
+<main class=" py-12 content-container bg-accent-dark dark">
+    <nav class="flex gap-4 p-4 text-white">
+        <a href="{{.Site.BaseURL}}" class="text-sm p-1.5 w-max items-center gap-2 flex rounded-md">
+          {{partial "icons/smallleftarrow.html" ""}}
+          <p>Main Site</p></a>
+          <a href="/blog" class=" text-sm p-1.5 w-max items-center gap-2 flex rounded-md">
+            {{partial "icons/smallleftarrow.html" ""}}
+            <p>Blog</p></a>
+      </nav>
+    
+    <div class="prose dark:prose-invert mx-auto mt-4">
+        <h1>{{.Title}}</h1>
+        <p>{{ .Date.Format "January 2, 2006" }}</p>
+    </div>
+    <div class="prose mx-auto dark:prose-invert">{{.Content}}</div>
+</main>
+
+
+{{end}}

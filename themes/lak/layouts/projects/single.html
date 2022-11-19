@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{{- partial "projectslisthead.html" . -}}
+<html>
+  <body class=" bg-gradient-to-r from-accent to-primary pb-4">
+  <nav class="flex gap-4 p-4">
+    <a href="{{.Site.BaseURL}}" class=" bg-white/20 text-sm p-1.5 w-max items-center gap-2 flex rounded-md">
+      {{partial "icons/smallleftarrow.html" ""}}
+      <p>Main Site</p></a>
+      <a href="/projects" class="bg-white/20 text-sm p-1.5 w-max items-center gap-2 flex rounded-md">
+        {{partial "icons/smallleftarrow.html" ""}}
+        <p>Projects</p></a>
+  
+  </nav>
+  <div class="p-4 flex h-[100vh] flex-col items-center gap-8 ">
+    <h1 class=" text-4xl text-white font-black lg:text-6xl">{{ .Title}}</h1>
+    <div class="carousel mx-auto h-[60vh] gap-4 lg:h-[75vh]  ">
+      {{range $img := .Params.images}}
+      <div class="carousel-item justify-center"><img class="rounded-md object-contain" src="{{$img}}"/></div>
+      {{end}}
+    </div>
+    <div class="text-white flex gap-4">
+      <a aria-label="github link" href="{{.Params.gh_link}}">{{partial "icons/githubicon.html"}}</a>
+      <a aria-labrel="extenal link" href="{{.Params.main_link}}"> {{partial "icons/externallink.html"}}</a>
+    </div>
+  </div>
+</body>
+</html>
