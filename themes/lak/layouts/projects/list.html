@@ -37,6 +37,7 @@
                     <a
                       aria-label="{{.Title }} overview"
                       href="{{.RelPermalink}}"
+                      
                     >
                       {{ partial "icons/moreicon.html" }}</a
                     >
@@ -44,12 +45,13 @@
                   {{ if .Params.gh_link}}
                   <li class="hover:text-accent">
                     <a href="{{.Params.gh_link}}"
+                    target="_blank"
                       >{{ partial "icons/githubicon.html" }}</a
                     >
                     {{end}}
                   </li>
                   <li class="hover:text-accent">
-                    <a href="{{.Params.main_link}}"
+                    <a href="{{.Params.main_link}}" target="_blank"
                       >{{ partial "icons/externallink.html" }}</a
                     >
                   </li>
