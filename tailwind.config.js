@@ -15,6 +15,16 @@ darkMode: "class",
       },
       colors: {
         "accent-dark": "#0C4A50"
+      }, 
+      keyframes: { 
+        "open-menu": { 
+          from: {transform: 'scaleY(0)'},
+          "50%": {transform: 'scaleY(1.1)'},
+          to: {transform: 'scaleY(1)'}
+        }
+      }, 
+      animation: { 
+        "open-menu": "open-menu 0.5s ease-in-out forwards"
       }
     },
   },

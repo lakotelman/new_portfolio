@@ -1,4 +1,4 @@
-<nav class="max-w-2xl absolute top-2 left-1/2 transform -translate-x-1/2 z-10 hidden md:visible">
+<nav class="max-w-2xl absolute top-2 left-1/2 transform -translate-x-1/2 z-10 hidden lg:block md:block">
   <ul class="flex justify-evenly gap-4 py-4 text-accent">
     <li
       class=" hover:-translate-y-1 duration-200 hover:cursor-pointer ease-in"
@@ -15,19 +15,17 @@
     <li class="hover:-translate-y-1 duration-200 hover:cursor-pointer ease-in"><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-<nav class="md:hidden absolute top-2 right-2 z-10">
-  <button class=""  id="nav-button" data-collapse-toggle="navbar-default" type="button" aria-controls="navbar-default" aria-expanded="false">
+<div class="md:hidden absolute top-2 right-2 z-10">
+  <button class=""  id="hamburger-button" data-collapse-toggle="navbar-default" type="button" aria-controls="navbar-default" aria-expanded="false">
     <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
     </div>
   </button>
-  <div class="hidden text-right bg-white m-0 p-4 rounded-md w-[150px] h-[100vh] md:block md:w-auto " id="navbar-default">
-    <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-</svg>
+  <nav class="z-10 origin-top animate-open-menu hidden flex-col absolute top-2 right-0 text-right bg-white m-0 p-4 rounded-md w-[250px] md:block md:w-auto " id="mobile-menu">
+    <button class="self-end text-4xl pr-4"> &times;
 </button>
-    <ul class="text-accent flex flex-col gap-8">
+    <ul class="text-accent flex flex-col gap-8 my-8 text-lg pr-4">
       <li
         class=""
       >
@@ -38,5 +36,5 @@
       <li class=""><a href="#thoughts">Thoughts</a></li>
       <li class=""><a href="#contact">Contact</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</div>

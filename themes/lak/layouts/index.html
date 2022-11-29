@@ -10,11 +10,11 @@
       <h1 class="z-10 text-center text-white text-5xl lg:text-8xl lg:tracking-widest ">
         Everywhere
       </h1>
-      <p class="text-white pt-5 z-10 text-center ">
-        I'm Laura-Ashlee. I design beautiful experiences.
+      <p class="text-white text-lg pt-5 z-10 text-center ">
+        I'm Laura-Ashlee. I develop beautiful experiences.
       </p>
       <div class="absolute bottom-0 mb-10 z-10 _hero-arrow">
-        {{partial "icons/arrowdown.html" " h-16 lg:h-12"}}
+        <a href="#skills">{{partial "icons/arrowdown.html" " h-16 lg:h-12"}}</a>
       </div>
       <div class="absolute z-0 m-auto">
         <img class="m-auto w-full object-scale-down" src="./images/homepage/Overlay.webp" />
@@ -35,8 +35,8 @@
     </div>
   </div>
   <!-- section content -->
-  <div class="grid lg:grid-cols-3 mx-auto mt-12 mb-20 gap-8 text-center lg:w-[1050px] lg:h-[450px]">
-    <div class="border-2 border-neutral p-4 h-full rounded-tr-[200px]">
+  <div id="skills-content" class="grid lg:grid-cols-3 mx-auto mt-12 mb-20 gap-8 text-center lg:w-[1050px] lg:h-[450px]">
+    <div class="_invisible border-2 border-neutral p-4 h-full rounded-tr-[200px]">
       <div class="flex flex-col items-center h-full justify-around">
         <h2>Frontend Development</h2>
         {{partial "icons/frontendicon.html"}}
@@ -45,7 +45,7 @@
         <p>React, Tailwind, CSS, HTML, Bootstrap</p>
       </div>
     </div>
-    <div class="border-2 border-neutral p-4 h-full rounded-t-[200px]">
+    <div class="_invisible border-2 border-neutral p-4 h-full rounded-t-[200px]">
       <div class="flex flex-col items-center h-full justify-around">
         <h2>UI/UX</h2>
         {{partial "icons/uiuxicon.html"}}
@@ -57,7 +57,7 @@
         <p>Figma, Affinity Designer</p>
       </div>
     </div>
-    <div class="border-2 border-neutral p-4 h-full rounded-tl-[200px]">
+    <div class="_invisible border-2 border-neutral p-4 h-full rounded-tl-[200px]">
       <div class="flex flex-col items-center h-full justify-around">
         <h2>Software Engineering</h2>
         {{partial "icons/softwareengineericon.html"}}
@@ -74,7 +74,7 @@
 <section 
   class="mx-auto bg-[url('/images/homepage/anotherprojectsbg.webp')] bg-cover bg-top bg-no-repeat max-w-[1200px] pb-4">
   <div class="z-10 mx-4 lg:ml-60">
-    <h1 class="pt-40 text-accent-dark lg:text-accent-dark text-5xl lg:text-7xl">Recent Work</h1>
+    <h1 class="_invisible pt-40 text-accent-dark lg:text-accent-dark text-5xl lg:text-7xl">Recent Work</h1>
   </div>
   <div id="work" class="overflow-x-hidden w-full flex justify-center">
     {{partial "decorations/starunderline2.html" "h-4 w-full "}}
@@ -103,9 +103,9 @@
 {{partial "decorations/linedivider.html"}}
 
 <!-- *** BLOG SECTION ***  -->
-<section id="thoughts" class="flex flex-col gap-8 justify-center max-w-5xl mx-auto p-8 mt-10">
+<section id="thoughts" class=" flex flex-col gap-8 justify-center max-w-5xl mx-auto p-8 mt-10">
   <div>
-    <h1 class="text-accent text-5xl lg:text-7xl text-right">Thoughts</h1>
+    <h1 class="_invisible text-accent text-5xl lg:text-7xl text-right">Thoughts</h1>
     <div class="overflow-x-hidden w-full flex justify-center">
       {{partial "decorations/starunderline.html" "h-4 w-full "}}
     </div>
@@ -144,7 +144,7 @@
         </div>
         <div>
           <label for="message">Message</label>
-          <textarea id="message"></textarea>
+          <textarea class="h-28" id="message"></textarea>
         </div>
         <button class="flex gap-6 content-center justify-center h-16">
           <h3 class="text-lg">Send Message</h3>
