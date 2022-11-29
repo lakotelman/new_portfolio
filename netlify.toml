@@ -1,6 +1,6 @@
 [build]
 publish = "public"  
-command = "hugo"
+command = "npm install && npm run build && hugo"
 
-[build.environment]
-HUGO_VERSION = "0.62.1"
+[context.production.environment]
+HUGO_VERSION = "0.107.0"
