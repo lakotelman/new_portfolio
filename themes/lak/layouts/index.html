@@ -110,7 +110,7 @@
       {{partial "decorations/starunderline.html" "h-4 w-full "}}
     </div>
   </div>
-  <div class="lg:flex justify-evenly  mx-auto lg:gap-48 mt-8">
+  <div class="lg:flex justify-evenly align-middle  mx-auto lg:gap-48 mt-8">
     {{range $blog :=  where .Site.RegularPages "Section" "blog"}}
     <div class="flex-1">
       <p>{{$blog.Params.Date.Format "January 2, 2006"}}</p>

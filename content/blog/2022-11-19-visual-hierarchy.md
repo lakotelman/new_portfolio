@@ -1,8 +1,7 @@
 ---
-title: Visual Hierarchy using UI/UX Fundamentals
-slug: ui-ux-visual-hierarchy
-summary: Making a website look neat and easy to follow is the best thing you can do for your users. 
+title: UI/UX Fix 1
+slug: ui-ux-fix-1
+summary: Making a call-to-action button more aesthetically pleasing and engaging using the UI/UX design fundamentals. 
 date: 2022-11-18
 ---
 
-Content
