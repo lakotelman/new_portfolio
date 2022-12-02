@@ -7,7 +7,7 @@ summary: A programmer style take on a paper doll project built with React which 
 date: 2022-10-18
 ---
 
-![alt text](/images/blog/ducky/duckystatic.jpeg)
+![view of the ducky app interface](/images/blog/ducky/duckystatic.jpeg)
 
 Sometimes we all need to confide in someone when things aren't going right. 
 
