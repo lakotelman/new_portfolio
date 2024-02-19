@@ -111,14 +111,14 @@
     </div>
   </div>
   <div class="lg:flex justify-evenly align-middle  mx-auto lg:gap-48 mt-8">
-    {{range $blog :=  where .Site.RegularPages "Section" "blog"}}
+    {{range $idx, $blog := first 3 (where .Site.RegularPages "Section" "blog")}}
     <div class="flex-1 my-4">
       <!-- <p>{{$blog.Params.Date.Format "January 2, 2006"}}</p> -->
       <h3 class="text-xl mb-4">{{$blog.Title}}</h3>
       <p>
         {{$blog.Summary}}
       </p>
-      <div class="mt-8 text-right"><a class="hover:text-primary text-accent font-bold" href="{{$blog.RelPermalink}}">Read More</a></div>
+      <div class="mt-4 mb-8 text-right"><a class="hover:text-primary text-accent font-bold" href="{{$blog.RelPermalink}}">Read More</a></div>
     </div>{{end}}
   </div>
   <a href="/blog" class="flex gap-6 content-center justify-center h-16 mt-8">
