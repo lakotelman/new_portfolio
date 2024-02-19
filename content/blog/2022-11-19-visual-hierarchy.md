@@ -39,6 +39,6 @@ What makes a site feel cohesive overall is making sure that designs are adaptabl
 I decided to make the image a darker color to really contrast with the white background of the blog posts. Fixing the scale of the image really helped to balance the left and right half of the card. Also, aligning the button to the right creates a visual hierarchy, making the button hard to miss. Also, there's a unicorn.
 
 ![the revised, neater cta](/images/blog/ui-ux-fix/blogctaafter.jpg)
-![the hover state for new CTA](/images/blog/ui-ux-fix/blogctahover.jpg)
+![the hover state for new CTA](/images/blog/ui-ux-fix/blogCTAhover.jpg)
 
 I got a little carried away with making the unicorn stand up on hover. Maybe I'll make a detailed post about that sometime in the future.

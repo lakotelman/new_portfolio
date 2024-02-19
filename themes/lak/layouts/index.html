@@ -3,7 +3,7 @@
 <section class="h-[100vh] bg-hero-image bg-no-repeat bg-cover bg-center relative">
   {{partial "header"}}
   <div class="">
-    <div class="flex flex-col items-center justify-center w-6/12 h-[100vh] mx-auto relative _hero-animation-parent">
+    <div class="flex flex-col items-center justify-center w-1/2 lg:w-3/4 h-[100vh] mx-auto relative _hero-animation-parent">
       <h1 class="z-10 text-center text-white text-5xl lg:text-7xl tracking-tight">
         Design is
       </h1>
@@ -16,7 +16,7 @@
       <div class="absolute bottom-0 mb-10 z-10 _hero-arrow">
         <a href="#skills">{{partial "icons/arrowdown.html" " h-16 lg:h-12"}}</a>
       </div>
-      <div class="absolute z-0 m-auto">
+      <div class="absolute z-0 m-auto hidden md:block">
         <img class="m-auto w-full object-scale-down" src="./images/homepage/Overlay.webp" />
       </div>
     </div>
@@ -71,7 +71,7 @@
 
 {{partial "decorations/linedivider.html"}}
 <!-- *** WORK SECTION ***  -->
-<section 
+<!-- <section 
   class="mx-auto bg-[url('/images/homepage/anotherprojectsbg.webp')] bg-cover bg-top bg-no-repeat max-w-[1200px] pb-4">
   <div class="z-10 mx-4 lg:ml-60">
     <h1 class="_invisible pt-40 text-accent-dark lg:text-accent-dark text-5xl lg:text-7xl">Recent Work</h1>
@@ -100,7 +100,7 @@
     </a>
   </div>
 </section>
-{{partial "decorations/linedivider.html"}}
+{{partial "decorations/linedivider.html"}} -->
 
 <!-- *** BLOG SECTION ***  -->
 <section id="thoughts" class=" flex flex-col gap-8 justify-center max-w-5xl mx-auto p-8 mt-10">
@@ -112,9 +112,9 @@
   </div>
   <div class="lg:flex justify-evenly align-middle  mx-auto lg:gap-48 mt-8">
     {{range $blog :=  where .Site.RegularPages "Section" "blog"}}
-    <div class="flex-1">
-      <p>{{$blog.Params.Date.Format "January 2, 2006"}}</p>
-      <h3 class="text-xl mb-8">{{$blog.Title}}</h3>
+    <div class="flex-1 my-4">
+      <!-- <p>{{$blog.Params.Date.Format "January 2, 2006"}}</p> -->
+      <h3 class="text-xl mb-4">{{$blog.Title}}</h3>
       <p>
         {{$blog.Summary}}
       </p>
@@ -129,10 +129,10 @@
 </section>
 
 <!-- *** CONTACT SECTION ***  -->
-<section class="my-12" id="contact">
-  <div class="bg-[url('/images/homepage/contactbg.webp')] bg-cover md:w-2/3 lg:w-1/3 mx-auto p-8 h-min">
-    <div class="px-12 py-28 border-2 outline-solid border-neutral rounded-tl-[200px] rounded-br-[200px]">
-      <h1 class="text-center text-5xl text-white">Get in Touch</h1>
+<section class="my-12 bg-hero-image bg-cover" id="contact">
+  <div class="max-w-lg mx-auto p-8 h-min">
+    <div class="px-6 lg:px-12 py-28 border-2 outline-solid border-neutral rounded-tl-[200px] rounded-br-[200px]">
+      <h1 class="text-center text-2xl md:text-5xl text-white">Get in Touch</h1>
       <form class="flex flex-col justify-center gap-12 mt-8" action="" data-netlify="true" method="POST">
         <div>
           <label for="name">Name</label>
@@ -146,7 +146,7 @@
           <label for="message">Message</label>
           <textarea class="h-28" id="message"></textarea>
         </div>
-        <button class="flex gap-6 content-center justify-center h-16">
+        <button class="flex gap-6 content-center justify-center items-center rounded-md p-2 bg-white/20">
           <h3 class="text-lg">Send Message</h3>
 
           {{partial "icons/arrowright.html"}}
