@@ -2279,6 +2279,10 @@ html {
   height: 60vh;
 }
 
+.min-h-\[100vh\] {
+  min-height: 100vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
